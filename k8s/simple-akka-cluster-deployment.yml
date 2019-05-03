@@ -29,23 +29,16 @@ spec:
                 apiVersion: v1
                 fieldPath: status.podIP
         ports:
+        # akka remoting
         - name: remoting
           containerPort: 2551
+        # akka-management api
         - name: api
           containerPort: 8080
+        # akka-management bootstrap
         - name: management
           containerPort: 8558
-#        readinessProbe:
-#          tcpSocket:
-#            port: 8080
-#          initialDelaySeconds: 5
-#          periodSeconds: 10
-#        livenessProbe:
-#          tcpSocket:
-#            port: 8080
-#          initialDelaySeconds: 15
-#          periodSeconds: 20
-        #health
+        # health
         livenessProbe:
           httpGet:
             path: /alive
