@@ -35,13 +35,23 @@ spec:
           containerPort: 8080
         - name: management
           containerPort: 8558
-        readinessProbe:
-          tcpSocket:
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
+#        readinessProbe:
+#          tcpSocket:
+#            port: 8080
+#          initialDelaySeconds: 5
+#          periodSeconds: 10
+#        livenessProbe:
+#          tcpSocket:
+#            port: 8080
+#          initialDelaySeconds: 15
+#          periodSeconds: 20
+        #health
         livenessProbe:
-          tcpSocket:
-            port: 8080
-          initialDelaySeconds: 15
-          periodSeconds: 20
+          httpGet:
+            path: /alive
+            port: management
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: management
+
