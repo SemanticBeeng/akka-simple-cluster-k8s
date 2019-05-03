@@ -28,5 +28,7 @@ curl http://$KUBE_IP:$MANAGEMENT_PORT/cluster/members | jq
 1. https://medium.com/stashaway-engineering/running-a-lagom-microservice-on-akka-cluster-with-split-brain-resolver-2a1c301659bd
 1. https://developer.lightbend.com/docs/akka-management/current/bootstrap/recipes.html
 1. https://developer.lightbend.com/docs/akka-management/current/bootstrap/kubernetes-api.html
+1. https://developer.lightbend.com/docs/akka-management/current/bootstrap/details.html
+1. https://developer.lightbend.com/docs/akka-management/current/bootstrap/local-config.html
 1. https://github.com/akka/akka-management/issues/263
 1. https://github.com/akka/akka-management/blob/d369d59da638d8d2cadb46c26300a6a778cd6469/integration-test/kubernetes-api/kubernetes/akka-cluster.yml#L30-L38
